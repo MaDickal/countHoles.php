@@ -6,7 +6,7 @@
  * Time: 6:20 PM
  */
 
-error_reporting(0);
+/*error_reporting(0);*/
 
 //score card
 $points = [
@@ -28,7 +28,8 @@ $points = [
   'O' => 1,
   'P' => 1,
   'Q' => 1,
-  'R' => 1
+  'R' => 1,
+  '0' => 1
 ];
 
 //string with holes to be counted
@@ -66,5 +67,5 @@ function count_holes_map_reduce($str) {
 //convert a letter to a score
 function letter_to_points($letter) {
   global $points;
-  return $points[$letter] ? $points[$letter] : 0;
+  return isset($points[$letter]) ? $points[$letter] : 0;
 }
