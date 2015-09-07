@@ -46,7 +46,7 @@ function count_holes($str, $points_ary) {
   $str = str_split($str);
   $count = 0;
   foreach ($str as $val) {
-    if ($points_ary[$val]) {
+    if (isset($points_ary[$val])) {
       $count += $points_ary[$val];
     }
   }
